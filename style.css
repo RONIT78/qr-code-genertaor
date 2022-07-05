@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Malayalam:wght@300&family=Montserrat:wght@300&family=Open+Sans:ital@1&family=Permanent+Marker&family=Poppins:wght@300&family=Raleway:wght@300&family=Satisfy&family=Ubuntu:ital,wght@0,400;1,300&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(#12C4E3, #E312C0);
+}
+
+.wrapper {
+    height: 260px;
+    background: #fff;
+    max-width: 410px;
+    border-radius: 7px;
+    padding: 16px 25px;
+    transition: height 0.3s ease;
+}
+
+.wrapper.active {
+    height: 560px;
+}
+
+header h1 {
+    font-size: 21px;
+    font-weight: 900;
+}
+
+header p {
+    margin-top: 5px;
+    color: #474747;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.wrapper .form {
+    margin: 20px 0 25px;
+}
+
+.form :where(input,
+button) {
+    width: 100%;
+    height: 55px;
+    outline: none;
+    border: none;
+}
+
+.form input {
+    font-size: 17px;
+    padding: 0 18px;
+    border: 1px solid #999;
+}
+
+.form button {
+    color: #ffff;
+    cursor: pointer;
+    background: #3498D8;
+    font-size: 17px;
+    margin-top: 20px;
+}
+
+.wrapper .qr-code {
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    align-items: center;
+    justify-content: center;
+    padding: 33px 0;
+    border: 1px solid #ccc;
+}
+
+.wrapper.active .qr-code {
+    opacity: 1;
+    pointer-events: all;
+    transition: opacity 0.5s 0.05s ease;
+}
